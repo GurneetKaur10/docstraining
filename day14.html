@@ -1,0 +1,97 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" rel="stylesheet" href="resources/sheet.css">
+<style type="text/css">
+    .ritz .waffle a {
+        color: inherit;
+    }
+
+    .ritz .waffle .s1 {
+        background-color: #ffffff;
+        text-align: left;
+        color: #000000;
+        font-family: 'Times New Roman';
+        font-size: 12pt;
+        vertical-align: top;
+        white-space: normal;
+        overflow: hidden;
+        word-wrap: break-word;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+
+    .ritz .waffle .s0 {
+        background-color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        color: #000000;
+        font-family: 'Times New Roman';
+        font-size: 13pt;
+        vertical-align: bottom;
+        white-space: nowrap;
+        direction: ltr;
+        padding: 2px 3px 2px 3px;
+    }
+</style>
+<div class="ritz grid-container" dir="ltr">
+    <table class="waffle" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="row-header freezebar-vertical-handle"></th>
+                <th id="66768037C0" style="width:1868px;" class="column-headers-background"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="height: 32px">
+                <th id="66768037R0" style="height: 32px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 32px"></div>
+                </th>
+                <td class="s0" dir="ltr">Day - 14 ~28/7/23 ~Friday </td>
+            </tr>
+            <tr style="height: 587px">
+                <th id="66768037R1" style="height: 587px;" class="row-headers-background">
+                    <div class="row-header-wrapper" style="line-height: 587px"></div>
+                </th>
+                <td class="s1" dir="ltr"><span style="font-weight:bold;">Task - Setting Up CI/CD Pipeline using
+                        Jenkins</span><br><br>Continuous Integration and Continuous Deployment (CI/CD) with Jenkins is a
+                    popular practice in software development that involves automating the process of building, testing,
+                    and deploying applications. Jenkins is an open-source automation server that is widely used for
+                    implementing CI/CD pipelines.<br>Jenkins supports a wide range of plugins that make it highly
+                    extensible and adaptable to different development environments and technologies. You can find
+                    plugins for various build tools, testing frameworks, deployment platforms, and more.<br>Keep in mind
+                    that CI/CD pipelines can be quite complex, depending on the project&#39;s needs. They might involve
+                    multiple stages, integration with external services, and intricate testing scenarios.<br>Other than
+                    Jenkins, there are also other CI/CD tools like GitLab CI/CD, Travis CI, CircleCI, and more, each
+                    with its unique features and integrations.<br><br><span style="font-weight:bold;">Step 1: Create a
+                        new Jenkins Pipeline project</span><br><br>1. In Jenkins, click on &quot;New Item&quot; to
+                    create a new project.<br>2. Choose &quot;Pipeline&quot; and give your project a name.<br>3. Under
+                    the &quot;Pipeline&quot; section, select &quot;Pipeline script&quot; and choose the &quot;Pipeline
+                    script from SCM&quot; option.<br>4. Select your version control system (e.g., Git) and provide the
+                    repository URL.<br><br><span style="font-weight:bold;">Step 2: Define your
+                        Jenkinsfile</span><br><br>1. In your version control repository, create a file named
+                    `Jenkinsfile`. This file will define the pipeline steps.<br>2. A basic Jenkinsfile consists of three
+                    stages: &quot;Build,&quot; &quot;Test,&quot; and &quot;Deploy.&quot; The Jenkinsfile should be
+                    written in the Groovy-based DSL (Declarative Syntax).<br><br>Here&#39;s a simple example of a
+                    Jenkinsfile:<br><br>```groovy<br>pipeline {<br> agent any<br> <br> stages {<br>
+                    stage(&#39;Build&#39;) {<br> steps {<br> // Checkout the code from the version control
+                    repository<br> checkout scm<br> <br> // Build your application (e.g., using Maven)<br> sh &#39;mvn
+                    clean package&#39;<br> }<br> }<br> stage(&#39;Test&#39;) {<br> steps {<br> // Run automated
+                    tests<br> // Add your testing commands here<br> }<br> }<br> stage(&#39;Deploy&#39;) {<br> steps
+                    {<br> // Deploy the application (e.g., using Docker or Kubernetes)<br> // Add your deployment
+                    commands here<br> }<br> }<br> }<br>}<br>```<br><br><span style="font-weight:bold;">Step 3: Save and
+                        trigger the pipeline</span><br><br>1. Save the Jenkinsfile in your version control
+                    repository.<br>2. Back in Jenkins, click on &quot;Save&quot; to save the pipeline
+                    configuration.<br>3. Click on &quot;Build Now&quot; to manually trigger the pipeline for the first
+                    time.<br><br>Now, whenever you push new code to the repository, Jenkins will automatically detect
+                    the changes and trigger the pipeline, executing the defined stages (Build, Test, and
+                    Deploy).<br><br>For a more comprehensive CI/CD pipeline, you can add additional stages for tasks
+                    like static code analysis, security checks, and integration testing. Jenkins supports various
+                    plugins that can be integrated into the pipeline to extend its capabilities based on your
+                    project&#39;s requirements.<br></td>
+            </tr>
+            <tr>
+                <th style="height:3px;" class="freezebar-cell freezebar-horizontal-handle"></th>
+                <td class="freezebar-cell"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
